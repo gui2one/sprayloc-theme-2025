@@ -1,0 +1,4 @@
+!inc/gallery/
+inc/gallery/*
+!inc/rentman_data
+inc/rentman_data/*
