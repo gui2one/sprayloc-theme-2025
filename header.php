@@ -41,6 +41,9 @@
         });
       }
     });
+
+    let event = new Event('beforeinstallprompt');
+    window.dispatchEvent(event);
   </script>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width" />
