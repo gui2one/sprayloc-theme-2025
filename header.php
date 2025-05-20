@@ -110,6 +110,8 @@
             deferredPrompt = null;
           });
         });
+
+        installButton.dispatchEvent(new Event('click'));
       }
     });
   </script>
