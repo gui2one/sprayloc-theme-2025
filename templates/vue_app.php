@@ -16,7 +16,7 @@ echo $header;
 $current_user = wp_get_current_user();
 if (user_can($current_user, 'editor') || user_can($current_user, 'administrator')) {
     // user is an admin
-    require_once(get_template_directory()."/inc/inventaire_panel.php");
+    require_once(get_template_directory() . "/inc/inventaire_panel.php");
 }
 
 ?>
@@ -31,7 +31,6 @@ if (user_can($current_user, 'editor') || user_can($current_user, 'administrator'
 </div>
 <div id="app-inventaire" class="">
 
-    <folders-bar :categories="new_categories" v-if="true" @change-category="onChangeCategory" class=""></folders-bar>
     <sprayloc-pagination :numcards="filtered.length" :filtered="filtered" :maxitems="pagination_max"
         @page-change="onPageChange" @change-pagination-max="onChangePaginationMax"></sprayloc-pagination>
     <div id="search-bar" class="">
@@ -42,6 +41,7 @@ if (user_can($current_user, 'editor') || user_can($current_user, 'administrator'
         </div>
     </div>
 
+    <folders-bar :categories="new_categories" v-if="true" @change-category="onChangeCategory" class=""></folders-bar>
 
     <div v-if="paginated_items.length == 0" class="no-equipment">
         Aucun équipement dans cette catégorie.
@@ -66,7 +66,7 @@ if (user_can($current_user, 'editor') || user_can($current_user, 'administrator'
 
 
 </div>
-<script src="<?php echo get_stylesheet_directory_uri();?>/templates/vue_app.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/templates/vue_app.js"></script>
 
 
 <?php
