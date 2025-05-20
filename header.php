@@ -85,39 +85,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <script>
-    let deferredPrompt;
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      // Prevent the mini-infobar from appearing
-      e.preventDefault();
-      // Save the event so it can be triggered later
-      deferredPrompt = e;
-      // Show the install button
-      const installButton = document.getElementById('pwa-install-btn');
-      if (installButton) {
-        installButton.style.display = 'block';
-        installButton.addEventListener('click', () => {
-          // Show the install prompt
-          deferredPrompt.prompt();
-          // Wait for the user's response
-          deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-              console.log('PWA install accepted');
-            } else {
-              console.log('PWA install dismissed');
-            }
-            deferredPrompt = null;
-          });
-        });
-
-        installButton.dispatchEvent(new Event('click'));
-      }
-    });
-  </script>
-  <button id="pwa-install-btn" style="z-index: 9999;">
-    📲 Install this app
-  </button>
   <div class="btn-page-top">
     <i class="fas fa-chevron-up"></i>
     <span class="text">Haut de Page</span>
@@ -136,7 +104,41 @@
 
 
     <div id="sprayloc-container">
+      <script>
+        let deferredPrompt;
 
+        window.addEventListener('beforeinstallprompt', (e) => {
+          // Prevent the mini-infobar from appearing
+          // e.preventDefault();
+          // Save the event so it can be triggered later
+          deferredPrompt = e;
+          // Show the install button
+          const installButton = document.getElementById('pwa-install-btn');
+          if (installButton) {
+            installButton.style.display = 'block';
+            installButton.addEventListener('click', () => {
+              // Show the install prompt
+              console.log("installing");
+
+              deferredPrompt.prompt();
+              // Wait for the user's response
+              deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                  console.log('PWA install accepted');
+                } else {
+                  console.log('PWA install dismissed');
+                }
+                deferredPrompt = null;
+              });
+            });
+
+            installButton.dispatchEvent(new Event('click'));
+          }
+        });
+      </script>
+      <button id="pwa-install-btn" style="z-index: 9999;">
+        📲 Install this app
+      </button>
       <?php
 
       $api_key = get_option("sprayloc_plugin_admin")["rentman_api_key"];
