@@ -14,6 +14,34 @@
 
     gtag('config', 'G-BY2H5WV3QL');
   </script>
+  <script>
+    let deferredPrompt;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the mini-infobar from appearing
+      e.preventDefault();
+      // Save the event so it can be triggered later
+      deferredPrompt = e;
+      // Show the install button
+      const installButton = document.getElementById('pwa-install-btn');
+      if (installButton) {
+        installButton.style.display = 'block';
+        installButton.addEventListener('click', () => {
+          // Show the install prompt
+          deferredPrompt.prompt();
+          // Wait for the user's response
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('PWA install accepted');
+            } else {
+              console.log('PWA install dismissed');
+            }
+            deferredPrompt = null;
+          });
+        });
+      }
+    });
+  </script>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width" />
   <meta name="description"
