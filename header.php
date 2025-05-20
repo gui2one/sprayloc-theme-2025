@@ -115,7 +115,7 @@
       }
     });
   </script>
-  <button id="pwa-install-btn" style="display:none;">
+  <button id="pwa-install-btn" style="z-index: 9999;">
     📲 Install this app
   </button>
   <div class="btn-page-top">
