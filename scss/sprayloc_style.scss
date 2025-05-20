@@ -109,7 +109,9 @@ body {
 
       margin: 0 2em;
       width: auto;
-      height : auto;
+      max-height : calc(100vh - 100px - 2em);
+      overflow-y: auto;
+      overflow-x: hidden;
       min-width: 150px;
       // max-width: 800px;
 
@@ -205,20 +207,31 @@ body {
     }
 
     .category {
+      display: inline-block;
       position: relative;
-      margin : 0 1em;
+      height : auto;
+      min-height : min-content;
+      margin : 0em 1em;
+      white-space: nowrap;
+
+      line-height: 30px;
+      overflow-y: unset;
+      // overflow-x: hidden;
+
+      text-overflow: ellipsis;
+      
     }
     .subfolders-container {
       position: absolute;
       z-index: 5;
-
-      border : 1px solid $grey;
+      min-width : 140px;
+      border : 1px solid $grey; 
       border-width:  0 0 0 3px;
       box-shadow: 2px 2px 4px rgba(black, 0.2);
       background-color: white;
       opacity: 0;
-      left: 0%;
-      top: 100%;
+      // left: 0%;
+      // top: 100%;
       transform: translateY(-10px);
       transition: all 0.15s ease-out;
       pointer-events: none;

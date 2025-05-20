@@ -98,7 +98,9 @@ body {
   justify-content: flex-start;
   margin: 0 2em;
   width: auto;
-  height: auto;
+  max-height: calc(100vh - 100px - 2em);
+  overflow-y: auto;
+  overflow-x: hidden;
   min-width: 150px;
   padding: 1em 0px;
   padding-left: 0.5em;
@@ -174,19 +176,26 @@ body {
   }
 }
 #app-inventaire #folders-bar .category {
+  display: inline-block;
   position: relative;
-  margin: 0 1em;
+  height: auto;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  margin: 0em 1em;
+  white-space: nowrap;
+  line-height: 30px;
+  overflow-y: unset;
+  text-overflow: ellipsis;
 }
 #app-inventaire #folders-bar .subfolders-container {
   position: absolute;
   z-index: 5;
+  min-width: 140px;
   border: 1px solid #343a40;
   border-width: 0 0 0 3px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   background-color: white;
   opacity: 0;
-  left: 0%;
-  top: 100%;
   transform: translateY(-10px);
   transition: all 0.15s ease-out;
   pointer-events: none;
