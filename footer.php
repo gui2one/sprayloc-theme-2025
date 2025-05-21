@@ -1,23 +1,35 @@
 <?php
 
-    function make_footer_menu()
-    {
-        $items = wp_get_menu_array('footer-menu');
-    
-        $str = '<ul class="footer-menu">';
-        foreach ($items as $item) {
-            $str .= "<li>";
-            $str .= "<a href=".$item['url']." ";
-            $str .= "class=".($item['active'] ? 'active' : '')."";
-            $str .= " >";
-            $str .= $item["title"];
-            $str .= "</a>";
-            $str .= "</li>";
-        }
-        
-        $str .= "</ul>";
-        return $str;
+function make_footer_menu()
+{
+    $items = wp_get_menu_array('footer-menu');
+    // $items = wp_get_nav_menu_items('footer-menu', array());
+    // var_dump($items);
+    // die();
+
+    $str = '<ul class="footer-menu">';
+    foreach ($items as $item) {
+        $str .= "<li>";
+        $str .= "<a href=" . $item['url'] . " ";
+        $str .= "class=" . ($item['active'] ? 'active' : '') . "";
+        $str .= " >";
+        $str .= $item["title"];
+        $str .= "</a>";
+        $str .= "</li>";
     }
+
+    // // add install button
+    // $str .= "<li>";
+    // $str .= "<a href=" . site_url("/install") . " ";
+    // $str .= "class=" . ($item['active'] ? 'active' : '') . "install-btn"; // adding the css class HERE !!
+    // $str .= " >";
+    // $str .= "Installer";
+    // $str .= "</a>";
+    // $str .= "</li>";
+
+    $str .= "</ul>";
+    return $str;
+}
 
 
 ?>
@@ -30,7 +42,7 @@
         <?php echo make_footer_menu(); ?>
         <div class="contact-infos">
             <i class="fa fa-phone" aria-hidden="true"></i><span> (+33)6 88 05 54 41</span><br>
-            <i class="fa fa-home" aria-hidden="true"></i><span> 26 canal St Martin</span> -- 
+            <i class="fa fa-home" aria-hidden="true"></i><span> 26 canal St Martin</span> --
             <span> 35000 Rennes</span>
         </div>
     </div>
@@ -41,4 +53,5 @@
 </div>
 <?php wp_footer(); ?>
 </body>
+
 </html>

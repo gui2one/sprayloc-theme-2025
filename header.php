@@ -104,7 +104,7 @@
 
 
     <div id="sprayloc-container">
-      <script>
+      <!-- <script>
         let deferredPrompt;
 
         window.addEventListener('beforeinstallprompt', (e) => {
@@ -138,7 +138,7 @@
       </script>
       <button id="pwa-install-btn" style="z-index: 9999;">
         📲 Install this app
-      </button>
+      </button> -->
       <?php
 
       $api_key = get_option("sprayloc_plugin_admin")["rentman_api_key"];

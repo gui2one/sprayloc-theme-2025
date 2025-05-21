@@ -12,6 +12,8 @@ require_once("inc/logo.php");
 // ini_set("xdebug.var_display_max_data", '-1');
 ini_set("xdebug.var_display_max_depth", '-1');
 
+
+
 add_action('after_setup_theme', 'generic_setup');
 function generic_setup()
 {
@@ -228,7 +230,7 @@ function sprayloc_thumbnails_update()
     $response = json_encode($response);
     echo $response;
 
-    die();
+    // die();
 }
 
 add_action('wp_ajax_sprayloc_thumbnails_update', 'sprayloc_thumbnails_update');
