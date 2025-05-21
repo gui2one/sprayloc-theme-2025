@@ -2,17 +2,28 @@
 
 function make_footer_menu()
 {
-    $items = wp_get_menu_array('footer-menu');
+    $current_url = home_url(add_query_arg([], $_SERVER['REQUEST_URI']));
+    $current_url = trailingslashit($current_url);
+
+
+    // $items = wp_get_menu_array('footer-menu');
+    $items = wp_get_nav_menu_items('footer-menu');
 
     $str = '<ul class="footer-menu">';
     foreach ($items as $item) {
+
+        $is_current = trailingslashit($item->url) == $current_url;
+        if ($is_current) {
+            $item->classes[] = 'active';
+        }
         $str .= "<li>";
-        $str .= "<a href=" . $item['url'] . " ";
-        $str .= "class=" . ($item['active'] ? 'active' : '') . "";
+        $str .= "<a href=" . $item->url . " ";
+        $str .= 'class="' . implode(' ', $item->classes) . '"';
         $str .= " >";
-        $str .= $item["title"];
+        $str .= $item->title;
         $str .= "</a>";
         $str .= "</li>";
+        // die();
     }
 
 
