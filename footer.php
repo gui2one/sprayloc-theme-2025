@@ -3,9 +3,6 @@
 function make_footer_menu()
 {
     $items = wp_get_menu_array('footer-menu');
-    // $items = wp_get_nav_menu_items('footer-menu', array());
-    // var_dump($items);
-    // die();
 
     $str = '<ul class="footer-menu">';
     foreach ($items as $item) {
@@ -18,14 +15,6 @@ function make_footer_menu()
         $str .= "</li>";
     }
 
-    // // add install button
-    // $str .= "<li>";
-    // $str .= "<a href=" . site_url("/install") . " ";
-    // $str .= "class=" . ($item['active'] ? 'active' : '') . "install-btn"; // adding the css class HERE !!
-    // $str .= " >";
-    // $str .= "Installer";
-    // $str .= "</a>";
-    // $str .= "</li>";
 
     $str .= "</ul>";
     return $str;
