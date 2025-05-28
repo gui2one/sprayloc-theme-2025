@@ -66,7 +66,7 @@ if (user_can($current_user, 'editor') || user_can($current_user, 'administrator'
 
 
 </div>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/templates/vue_app.js"></script>
+<!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/templates/vue_app.js"></script> -->
 
 
 <?php

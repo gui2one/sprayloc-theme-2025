@@ -1,16 +1,16 @@
 <?php
 $root_dir = preg_replace('/wp-content.*$/', '', __DIR__);
 require_once($root_dir . "wp-load.php");
-$theme_dir = get_template_directory();
+$theme_dir = plugin_dir_path(__FILE__);
 
 
 
 $json_files = array(
 
-    "equipment" => $theme_dir . "/inc/rentman_data/equipment.json",
-    "folders" => $theme_dir . "/inc/rentman_data/folders.json",
-    "kits" => $theme_dir . "/inc/rentman_data/kits.json",
-    "files" => $theme_dir . "/inc/rentman_data/files.json"
+    "equipment" => $theme_dir . "rentman_data/equipment.json",
+    "folders" => $theme_dir . "rentman_data/folders.json",
+    "kits" => $theme_dir . "rentman_data/kits.json",
+    "files" => $theme_dir . "rentman_data/files.json"
 );
 
 function remove_duplicate_items($arr)

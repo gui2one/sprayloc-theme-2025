@@ -74,22 +74,22 @@ body {
   height: 80px;
 }
 
-#app-inventaire {
+#app-inventaire, #app-inventaire_2025 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "folders" "search" "pagination" "cards" "pagination_bottom";
 }
 @media screen and (min-width: 1000px) {
-  #app-inventaire {
+  #app-inventaire, #app-inventaire_2025 {
     grid-template-columns: 170px 1fr;
     grid-template-areas: "search search" ". pagination" "folders cards" ". pagination_bottom";
   }
 }
-#app-inventaire #folders-bar {
+#app-inventaire #folders-bar, #app-inventaire_2025 #folders-bar {
   grid-area: folders;
   position: relative;
 }
-#app-inventaire #folders-bar .wrapper {
+#app-inventaire #folders-bar .wrapper, #app-inventaire_2025 #folders-bar .wrapper {
   position: sticky;
   top: 100px;
   display: flex;
@@ -110,7 +110,7 @@ body {
   border-bottom-right-radius: 8px;
 }
 @media screen and (min-width: 1000px) {
-  #app-inventaire #folders-bar .wrapper {
+  #app-inventaire #folders-bar .wrapper, #app-inventaire_2025 #folders-bar .wrapper {
     flex-wrap: nowrap;
     border-radius: 4px;
     margin-top: 0px !important;
@@ -118,7 +118,7 @@ body {
     margin: 0;
     width: auto;
   }
-  #app-inventaire #folders-bar .wrapper #inline-categories {
+  #app-inventaire #folders-bar .wrapper #inline-categories, #app-inventaire_2025 #folders-bar .wrapper #inline-categories {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
@@ -127,14 +127,14 @@ body {
     margin: 0 auto;
     width: auto;
   }
-  #app-inventaire #folders-bar .wrapper #inline-categories .category {
+  #app-inventaire #folders-bar .wrapper #inline-categories .category, #app-inventaire_2025 #folders-bar .wrapper #inline-categories .category {
     padding: 0.3em 0.5em;
     margin: 0;
   }
-  #app-inventaire #folders-bar .wrapper #inline-categories .category a {
+  #app-inventaire #folders-bar .wrapper #inline-categories .category a, #app-inventaire_2025 #folders-bar .wrapper #inline-categories .category a {
     padding: 0;
   }
-  #app-inventaire #folders-bar .wrapper #inline-categories .category::before {
+  #app-inventaire #folders-bar .wrapper #inline-categories .category::before, #app-inventaire_2025 #folders-bar .wrapper #inline-categories .category::before {
     content: "";
     position: absolute;
     left: 0;
@@ -145,7 +145,7 @@ body {
     border-bottom: 1px solid rgba(52, 58, 64, 0.2);
   }
 }
-#app-inventaire #folders-bar #inline-categories {
+#app-inventaire #folders-bar #inline-categories, #app-inventaire_2025 #folders-bar #inline-categories {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -155,27 +155,27 @@ body {
   width: 100%;
 }
 @media screen and (max-width: 1000px) {
-  #app-inventaire #folders-bar #inline-categories {
+  #app-inventaire #folders-bar #inline-categories, #app-inventaire_2025 #folders-bar #inline-categories {
     display: none;
   }
 }
-#app-inventaire #folders-bar #folders-dropdown button {
+#app-inventaire #folders-bar #folders-dropdown button, #app-inventaire_2025 #folders-bar #folders-dropdown button {
   width: 200px;
   background-color: #343a40;
 }
-#app-inventaire #folders-bar #folders-dropdown button:hover {
+#app-inventaire #folders-bar #folders-dropdown button:hover, #app-inventaire_2025 #folders-bar #folders-dropdown button:hover {
   background-color: #4b545c;
 }
-#app-inventaire #folders-bar #folders-dropdown .dropdown-subcategory {
+#app-inventaire #folders-bar #folders-dropdown .dropdown-subcategory, #app-inventaire_2025 #folders-bar #folders-dropdown .dropdown-subcategory {
   font-size: 0.8em;
   padding-left: 1em;
 }
 @media screen and (min-width: 1000px) {
-  #app-inventaire #folders-bar #folders-dropdown {
+  #app-inventaire #folders-bar #folders-dropdown, #app-inventaire_2025 #folders-bar #folders-dropdown {
     display: none;
   }
 }
-#app-inventaire #folders-bar .category {
+#app-inventaire #folders-bar .category, #app-inventaire_2025 #folders-bar .category {
   display: inline-block;
   position: relative;
   height: auto;
@@ -187,7 +187,7 @@ body {
   overflow-y: unset;
   text-overflow: ellipsis;
 }
-#app-inventaire #folders-bar .subfolders-container {
+#app-inventaire #folders-bar .subfolders-container, #app-inventaire_2025 #folders-bar .subfolders-container {
   position: absolute;
   z-index: 5;
   min-width: 140px;
@@ -200,37 +200,37 @@ body {
   transition: all 0.15s ease-out;
   pointer-events: none;
 }
-#app-inventaire #folders-bar .subfolders-container.show {
+#app-inventaire #folders-bar .subfolders-container.show, #app-inventaire_2025 #folders-bar .subfolders-container.show {
   pointer-events: unset;
   opacity: 1;
   transform: translateY(0px);
 }
-#app-inventaire #folders-bar div a {
+#app-inventaire #folders-bar div a, #app-inventaire_2025 #folders-bar div a {
   display: block;
   text-align: middle;
   cursor: pointer;
   opacity: 0.5;
   padding: 0 0.2em;
 }
-#app-inventaire #folders-bar div a:hover {
+#app-inventaire #folders-bar div a:hover, #app-inventaire_2025 #folders-bar div a:hover {
   opacity: 1;
 }
-#app-inventaire #folders-bar div.subcategory a {
+#app-inventaire #folders-bar div.subcategory a, #app-inventaire_2025 #folders-bar div.subcategory a {
   font-size: 0.8rem;
   margin: 0.3em;
   padding-top: 0.5em;
   left: 1em;
 }
-#app-inventaire #folders-bar div.active {
+#app-inventaire #folders-bar div.active, #app-inventaire_2025 #folders-bar div.active {
   opacity: 1;
   font-weight: bolder;
   position: relative;
   color: #343a40;
 }
-#app-inventaire #folders-bar div.active a {
+#app-inventaire #folders-bar div.active a, #app-inventaire_2025 #folders-bar div.active a {
   opacity: 1;
 }
-#app-inventaire #folders-bar div.active::before {
+#app-inventaire #folders-bar div.active::before, #app-inventaire_2025 #folders-bar div.active::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -240,7 +240,7 @@ body {
   pointer-events: none;
   border-bottom: 2px solid #343a40;
 }
-#app-inventaire .no-equipment {
+#app-inventaire .no-equipment, #app-inventaire_2025 .no-equipment {
   position: relative;
   grid-area: cards;
   font-weight: bolder;
@@ -250,7 +250,7 @@ body {
   text-align: center;
   padding: 2em 0em;
 }
-#app-inventaire #sprayloc-pagination {
+#app-inventaire #sprayloc-pagination, #app-inventaire_2025 #sprayloc-pagination {
   grid-area: pagination;
   margin: 1.5em 0.5em;
   position: relative;
@@ -259,10 +259,10 @@ body {
      -moz-user-select: none;
           user-select: none;
 }
-#app-inventaire #sprayloc-pagination.pagination-bottom {
+#app-inventaire #sprayloc-pagination.pagination-bottom, #app-inventaire_2025 #sprayloc-pagination.pagination-bottom {
   grid-area: pagination_bottom;
 }
-#app-inventaire #sprayloc-pagination .wrapper {
+#app-inventaire #sprayloc-pagination .wrapper, #app-inventaire_2025 #sprayloc-pagination .wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -271,13 +271,13 @@ body {
   max-width: 75%;
   flex-direction: row;
 }
-#app-inventaire #sprayloc-pagination .wrapper .page-number {
+#app-inventaire #sprayloc-pagination .wrapper .page-number, #app-inventaire_2025 #sprayloc-pagination .wrapper .page-number {
   color: black;
   font-weight: normal;
   padding: 0 0.5em;
   position: relative;
 }
-#app-inventaire #sprayloc-pagination .wrapper .page-number .active::before {
+#app-inventaire #sprayloc-pagination .wrapper .page-number .active::before, #app-inventaire_2025 #sprayloc-pagination .wrapper .page-number .active::before {
   content: "";
   position: absolute;
   left: 0;
@@ -289,32 +289,32 @@ body {
   border-radius: 3px;
   z-index: -1;
 }
-#app-inventaire #sprayloc-pagination .page-numbers {
+#app-inventaire #sprayloc-pagination .page-numbers, #app-inventaire_2025 #sprayloc-pagination .page-numbers {
   display: flex;
   flex-direction: row;
   margin: 0 0.5em;
   justify-content: space-around;
 }
-#app-inventaire #sprayloc-pagination .pagination-navigation {
+#app-inventaire #sprayloc-pagination .pagination-navigation, #app-inventaire_2025 #sprayloc-pagination .pagination-navigation {
   cursor: pointer;
   font-weight: bold;
   opacity: 0.5;
 }
-#app-inventaire #sprayloc-pagination .pagination-navigation:hover {
+#app-inventaire #sprayloc-pagination .pagination-navigation:hover, #app-inventaire_2025 #sprayloc-pagination .pagination-navigation:hover {
   opacity: 1;
 }
 @media screen and (min-width: 1400px) {
-  #app-inventaire #sprayloc-pagination {
+  #app-inventaire #sprayloc-pagination, #app-inventaire_2025 #sprayloc-pagination {
     grid-area: pagination;
   }
 }
-#app-inventaire #search-infos {
+#app-inventaire #search-infos, #app-inventaire_2025 #search-infos {
   padding: 1em 0.5em 0em 0.5em;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
 }
-#app-inventaire #search-bar {
+#app-inventaire #search-bar, #app-inventaire_2025 #search-bar {
   grid-area: search;
   position: relative;
   height: 50px;
@@ -323,24 +323,24 @@ body {
   align-items: center;
   max-width: 1100px;
 }
-#app-inventaire #search-bar #search {
+#app-inventaire #search-bar #search, #app-inventaire_2025 #search-bar #search {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 1em;
   border-bottom: 1px solid gray;
 }
-#app-inventaire #search-bar #search input[type=search] {
+#app-inventaire #search-bar #search input[type=search], #app-inventaire_2025 #search-bar #search input[type=search] {
   font-size: 17px;
   border: none;
   float: left;
   width: 150px;
   background: #f1f1f1;
 }
-#app-inventaire #search-bar #search input[type=search]:focus {
+#app-inventaire #search-bar #search input[type=search]:focus, #app-inventaire_2025 #search-bar #search input[type=search]:focus {
   outline: none;
 }
-#app-inventaire #search-bar #search i {
+#app-inventaire #search-bar #search i, #app-inventaire_2025 #search-bar #search i {
   position: relative;
   left: 0px;
   width: 30px;
@@ -351,10 +351,10 @@ body {
   line-height: 30px;
   color: #343a40;
 }
-#app-inventaire .has-search .form-control {
+#app-inventaire .has-search .form-control, #app-inventaire_2025 .has-search .form-control {
   padding-left: 2.375rem;
 }
-#app-inventaire .has-search .form-control-feedback {
+#app-inventaire .has-search .form-control-feedback, #app-inventaire_2025 .has-search .form-control-feedback {
   position: absolute;
   z-index: 2;
   display: block;
@@ -365,7 +365,7 @@ body {
   pointer-events: none;
   color: #aaa;
 }
-#app-inventaire .cards-container {
+#app-inventaire .cards-container, #app-inventaire_2025 .cards-container {
   display: grid;
   justify-content: center;
   grid-area: cards;
@@ -381,7 +381,7 @@ body {
   grid-template-columns: repeat(auto-fill, var(--auto-grid-min-size));
   grid-gap: 1rem;
 }
-#app-inventaire .cards-container .sprayloc-card {
+#app-inventaire .cards-container .sprayloc-card, #app-inventaire_2025 .cards-container .sprayloc-card {
   overflow-y: hidden;
   width: 100%;
   background-color: #343a40;
@@ -391,22 +391,22 @@ body {
   transition: all 0.12s linear;
   cursor: pointer;
 }
-#app-inventaire .cards-container .sprayloc-card:hover {
+#app-inventaire .cards-container .sprayloc-card:hover, #app-inventaire_2025 .cards-container .sprayloc-card:hover {
   background-color: #393f46;
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
 }
-#app-inventaire .cards-container .sprayloc-card .card-image {
+#app-inventaire .cards-container .sprayloc-card .card-image, #app-inventaire_2025 .cards-container .sprayloc-card .card-image {
   width: 100%;
   min-height: 100px;
   aspect-ratio: 1/1;
   background-size: cover;
   background-position: center center;
 }
-#app-inventaire .cards-container .sprayloc-card .content {
+#app-inventaire .cards-container .sprayloc-card .content, #app-inventaire_2025 .cards-container .sprayloc-card .content {
   padding: 0.6em 0.8em;
   color: white;
 }
-#app-inventaire .cards-container .sprayloc-card .content .title {
+#app-inventaire .cards-container .sprayloc-card .content .title, #app-inventaire_2025 .cards-container .sprayloc-card .content .title {
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
@@ -417,15 +417,15 @@ body {
   font-size: 1em;
   cursor: pointer;
 }
-#app-inventaire .cards-container .sprayloc-card .content .title:hover {
+#app-inventaire .cards-container .sprayloc-card .content .title:hover, #app-inventaire_2025 .cards-container .sprayloc-card .content .title:hover {
   text-decoration: underline;
 }
-#app-inventaire .cards-container .sprayloc-card .content .external-remark {
+#app-inventaire .cards-container .sprayloc-card .content .external-remark, #app-inventaire_2025 .cards-container .sprayloc-card .content .external-remark {
   font-size: 0.85em;
   font-weight: lighter;
   text-transform: lowercase;
 }
-#app-inventaire .cards-container .sprayloc-card .content .external-remark.block-ellipsis {
+#app-inventaire .cards-container .sprayloc-card .content .external-remark.block-ellipsis, #app-inventaire_2025 .cards-container .sprayloc-card .content .external-remark.block-ellipsis {
   display: block;
   display: -webkit-box;
   max-width: 100%;
@@ -438,23 +438,23 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#app-inventaire .cards-container .sprayloc-card .content .category {
+#app-inventaire .cards-container .sprayloc-card .content .category, #app-inventaire_2025 .cards-container .sprayloc-card .content .category {
   font-size: 0.7em;
 }
-#app-inventaire .cards-container .sprayloc-card .card-footer {
+#app-inventaire .cards-container .sprayloc-card .card-footer, #app-inventaire_2025 .cards-container .sprayloc-card .card-footer {
   cursor: pointer;
   background-color: #4b545c;
   font-size: 0.8em;
   padding: 0.3em 0.8em;
 }
-#app-inventaire .cards-container .sprayloc-card .card-footer a {
+#app-inventaire .cards-container .sprayloc-card .card-footer a, #app-inventaire_2025 .cards-container .sprayloc-card .card-footer a {
   text-decoration: none;
   color: white;
 }
-#app-inventaire .cards-container .sprayloc-card .card-footer a:hover {
+#app-inventaire .cards-container .sprayloc-card .card-footer a:hover, #app-inventaire_2025 .cards-container .sprayloc-card .card-footer a:hover {
   text-decoration: underline;
 }
-#app-inventaire .cards-container .sprayloc-item-row {
+#app-inventaire .cards-container .sprayloc-item-row, #app-inventaire_2025 .cards-container .sprayloc-item-row {
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -465,22 +465,22 @@ body {
   transition: all 0.12s linear;
   cursor: pointer;
 }
-#app-inventaire .cards-container .sprayloc-item-row:hover {
+#app-inventaire .cards-container .sprayloc-item-row:hover, #app-inventaire_2025 .cards-container .sprayloc-item-row:hover {
   background-color: #393f46;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
 }
-#app-inventaire .cards-container .sprayloc-item-row .card-image {
+#app-inventaire .cards-container .sprayloc-item-row .card-image, #app-inventaire_2025 .cards-container .sprayloc-item-row .card-image {
   width: 50px;
   height: 50px;
   flex-shrink: 0;
   background-size: cover;
   background-position: center;
 }
-#app-inventaire .cards-container .sprayloc-item-row .content {
+#app-inventaire .cards-container .sprayloc-item-row .content, #app-inventaire_2025 .cards-container .sprayloc-item-row .content {
   padding-left: 0.6em;
   color: white;
 }
-#app-inventaire .cards-container .sprayloc-item-row .content .title {
+#app-inventaire .cards-container .sprayloc-item-row .content .title, #app-inventaire_2025 .cards-container .sprayloc-item-row .content .title {
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
@@ -491,15 +491,15 @@ body {
   font-size: 1em;
   cursor: pointer;
 }
-#app-inventaire .cards-container .sprayloc-item-row .content .title:hover {
+#app-inventaire .cards-container .sprayloc-item-row .content .title:hover, #app-inventaire_2025 .cards-container .sprayloc-item-row .content .title:hover {
   text-decoration: underline;
 }
-#app-inventaire .cards-container .sprayloc-item-row .content .external-remark {
+#app-inventaire .cards-container .sprayloc-item-row .content .external-remark, #app-inventaire_2025 .cards-container .sprayloc-item-row .content .external-remark {
   font-size: 0.85em;
   font-weight: lighter;
   text-transform: lowercase;
 }
-#app-inventaire .cards-container .sprayloc-item-row .content .external-remark.block-ellipsis {
+#app-inventaire .cards-container .sprayloc-item-row .content .external-remark.block-ellipsis, #app-inventaire_2025 .cards-container .sprayloc-item-row .content .external-remark.block-ellipsis {
   display: block;
   display: -webkit-box;
   max-width: 100%;
@@ -512,27 +512,27 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#app-inventaire .cards-container .sprayloc-item-row .content .category {
+#app-inventaire .cards-container .sprayloc-item-row .content .category, #app-inventaire_2025 .cards-container .sprayloc-item-row .content .category {
   font-size: 0.7em;
 }
-#app-inventaire .cards-container .sprayloc-item-row .card-footer {
+#app-inventaire .cards-container .sprayloc-item-row .card-footer, #app-inventaire_2025 .cards-container .sprayloc-item-row .card-footer {
   display: none;
 }
 @media screen and (max-width: 500px) {
-  #app-inventaire .cards-container {
+  #app-inventaire .cards-container, #app-inventaire_2025 .cards-container {
     grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 1500px) {
-  #app-inventaire .cards-container {
+  #app-inventaire .cards-container, #app-inventaire_2025 .cards-container {
     margin: 0 auto;
   }
 }
-#app-inventaire #details-container {
+#app-inventaire #details-container, #app-inventaire_2025 #details-container {
   position: absolute;
   color: white;
 }
-#app-inventaire #details-container #details-overlay {
+#app-inventaire #details-container #details-overlay, #app-inventaire_2025 #details-container #details-overlay {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -543,11 +543,11 @@ body {
   pointer-events: none;
   z-index: 20;
 }
-#app-inventaire #details-container #details-overlay.opened {
+#app-inventaire #details-container #details-overlay.opened, #app-inventaire_2025 #details-container #details-overlay.opened {
   opacity: 1;
 }
 @media screen and (min-width: 1000px) {
-  #app-inventaire #details-container #details-overlay {
+  #app-inventaire #details-container #details-overlay, #app-inventaire_2025 #details-container #details-overlay {
     transition: opacity 0.15s linear;
     -webkit-backdrop-filter: blur(5px) brightness(120%) contrast(90%);
             backdrop-filter: blur(5px) brightness(120%) contrast(90%);
@@ -555,7 +555,7 @@ body {
     pointer-events: none;
   }
 }
-#app-inventaire #details-container #details-window {
+#app-inventaire #details-container #details-window, #app-inventaire_2025 #details-container #details-window {
   position: fixed;
   height: 85vh;
   max-height: 100%;
@@ -575,56 +575,56 @@ body {
   opacity: 0;
   grid-template-areas: "header pictures" "title pictures" "description pictures" "description pictures";
 }
-#app-inventaire #details-container #details-window.opened {
+#app-inventaire #details-container #details-window.opened, #app-inventaire_2025 #details-container #details-window.opened {
   opacity: 1;
   transform: translate(-50%, -50%);
   pointer-events: unset;
 }
-#app-inventaire #details-container #details-window .header {
+#app-inventaire #details-container #details-window .header, #app-inventaire_2025 #details-container #details-window .header {
   grid-area: header;
   background: #343a40;
   height: 80px;
 }
-#app-inventaire #details-container #details-window .header .close-details-btn {
+#app-inventaire #details-container #details-window .header .close-details-btn, #app-inventaire_2025 #details-container #details-window .header .close-details-btn {
   cursor: pointer;
   width: 50px;
 }
-#app-inventaire #details-container #details-window .header .close-details-btn svg {
+#app-inventaire #details-container #details-window .header .close-details-btn svg, #app-inventaire_2025 #details-container #details-window .header .close-details-btn svg {
   color: #ddd;
   width: 100%;
   height: 80px;
   font-weight: light;
   transition: all 0.15s ease-out;
 }
-#app-inventaire #details-container #details-window .header .close-details-btn:hover svg {
+#app-inventaire #details-container #details-window .header .close-details-btn:hover svg, #app-inventaire_2025 #details-container #details-window .header .close-details-btn:hover svg {
   transform: translateX(10px);
   color: #555;
 }
-#app-inventaire #details-container #details-window .title {
+#app-inventaire #details-container #details-window .title, #app-inventaire_2025 #details-container #details-window .title {
   grid-area: title;
   color: white;
   font-size: 2em;
   margin: 0;
   padding: 0.5rem 1rem;
 }
-#app-inventaire #details-container #details-window .description {
+#app-inventaire #details-container #details-window .description, #app-inventaire_2025 #details-container #details-window .description {
   grid-area: description;
   color: white;
   padding: 0;
   overflow-y: auto;
 }
-#app-inventaire #details-container #details-window .kit {
+#app-inventaire #details-container #details-window .kit, #app-inventaire_2025 #details-container #details-window .kit {
   grid-area: kit;
   padding: 0 2rem;
   padding-bottom: 1rem;
 }
-#app-inventaire #details-container #details-window .kit a {
+#app-inventaire #details-container #details-window .kit a, #app-inventaire_2025 #details-container #details-window .kit a {
   cursor: pointer;
 }
-#app-inventaire #details-container #details-window .kit a:hover {
+#app-inventaire #details-container #details-window .kit a:hover, #app-inventaire_2025 #details-container #details-window .kit a:hover {
   text-decoration: underline;
 }
-#app-inventaire #details-container #details-window div span.no-picture {
+#app-inventaire #details-container #details-window div span.no-picture, #app-inventaire_2025 #details-container #details-window div span.no-picture {
   display: block;
   position: relative;
   width: 100%;
@@ -634,7 +634,7 @@ body {
   transform: translateY(50%);
   top: -55px;
 }
-#app-inventaire #details-container #details-window .pictures {
+#app-inventaire #details-container #details-window .pictures, #app-inventaire_2025 #details-container #details-window .pictures {
   grid-area: pictures;
   position: relative;
   width: 100%;
@@ -642,13 +642,13 @@ body {
   overflow: hidden;
   background-color: #121416;
 }
-#app-inventaire #details-container #details-window .pictures.single-image {
+#app-inventaire #details-container #details-window .pictures.single-image, #app-inventaire_2025 #details-container #details-window .pictures.single-image {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 @media screen and (max-width: 800px) {
-  #app-inventaire #details-container #details-window {
+  #app-inventaire #details-container #details-window, #app-inventaire_2025 #details-container #details-window {
     width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 0.2fr auto 0.6fr 1fr;
@@ -658,32 +658,32 @@ body {
     grid-template-areas: "header header" "title title" "description description" "pictures pictures";
     overflow-y: scroll;
   }
-  #app-inventaire #details-container #details-window .title {
+  #app-inventaire #details-container #details-window .title, #app-inventaire_2025 #details-container #details-window .title {
     grid-area: title;
     font-size: 1.2em;
     margin: 0;
     height: -moz-min-content;
     height: min-content;
   }
-  #app-inventaire #details-container #details-window .description {
+  #app-inventaire #details-container #details-window .description, #app-inventaire_2025 #details-container #details-window .description {
     padding: 0.5rem;
   }
 }
-#app-inventaire .carousel-indicators li {
+#app-inventaire .carousel-indicators li, #app-inventaire_2025 .carousel-indicators li {
   filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
-#app-inventaire .carousel-inner {
+#app-inventaire .carousel-inner, #app-inventaire_2025 .carousel-inner {
   width: 100px !important;
   height: 100px !important;
 }
-#app-inventaire .carousel-item {
+#app-inventaire .carousel-item, #app-inventaire_2025 .carousel-item {
   width: 100px;
   height: 100px;
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
-#app-inventaire .pictures .image-slider-controls {
+#app-inventaire .pictures .image-slider-controls, #app-inventaire_2025 .pictures .image-slider-controls {
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -691,10 +691,10 @@ body {
   display: flex;
   pointer-events: none;
 }
-#app-inventaire .pictures .image-slider-controls:focus {
+#app-inventaire .pictures .image-slider-controls:focus, #app-inventaire_2025 .pictures .image-slider-controls:focus {
   outline: none;
 }
-#app-inventaire .pictures .image-slider-controls div {
+#app-inventaire .pictures .image-slider-controls div, #app-inventaire_2025 .pictures .image-slider-controls div {
   display: block;
   height: 80px;
   position: absolute;
@@ -704,16 +704,16 @@ body {
   z-index: 10;
   pointer-events: all;
 }
-#app-inventaire .pictures .image-slider-controls div:hover {
+#app-inventaire .pictures .image-slider-controls div:hover, #app-inventaire_2025 .pictures .image-slider-controls div:hover {
   opacity: 1;
 }
-#app-inventaire .pictures .image-slider-controls div:focus {
+#app-inventaire .pictures .image-slider-controls div:focus, #app-inventaire_2025 .pictures .image-slider-controls div:focus {
   outline: none;
 }
-#app-inventaire .pictures .image-slider-controls .prev {
+#app-inventaire .pictures .image-slider-controls .prev, #app-inventaire_2025 .pictures .image-slider-controls .prev {
   left: 0px;
 }
-#app-inventaire .pictures .image-slider-controls .next {
+#app-inventaire .pictures .image-slider-controls .next, #app-inventaire_2025 .pictures .image-slider-controls .next {
   right: 0px;
 }
 
