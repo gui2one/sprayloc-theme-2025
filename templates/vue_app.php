@@ -13,11 +13,11 @@ $header = ob_get_clean();
 $header = preg_replace('#<title>(.*?)<\/title>#', "<title>$title</title>", $header);
 echo $header;
 ////////
-$current_user = wp_get_current_user();
-if (user_can($current_user, 'editor') || user_can($current_user, 'administrator')) {
-    // user is an admin
-    require_once(get_template_directory() . "/inc/inventaire_panel.php");
-}
+// $current_user = wp_get_current_user();
+// if (user_can($current_user, 'editor') || user_can($current_user, 'administrator')) {
+//     // user is an admin
+//     require_once(get_template_directory() . "/inc/inventaire_panel.php");
+// }
 
 ?>
 
