@@ -7,10 +7,10 @@ $theme_dir = plugin_dir_path(__FILE__);
 
 $json_files = array(
 
-    "equipment" => $theme_dir . "rentman_data/equipment.json",
-    "folders" => $theme_dir . "rentman_data/folders.json",
-    "kits" => $theme_dir . "rentman_data/kits.json",
-    "files" => $theme_dir . "rentman_data/files.json"
+    "equipment" => $theme_dir . "/rentman_data/equipment.json",
+    "folders" => $theme_dir . "/rentman_data/folders.json",
+    "kits" => $theme_dir . "/rentman_data/kits.json",
+    "files" => $theme_dir . "/rentman_data/files.json"
 );
 
 function remove_duplicate_items($arr)
